@@ -1,6 +1,11 @@
 import { useState,useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
+import {ReactComponent as Trashicon} from './assets/Trashicon.svg'
+import {ReactComponent as Saveicon} from './assets/Saveicon.svg'
+import {ReactComponent as Editicon} from './assets/Editicon.svg'
+
+
 
 function App() {
   const [todoList,setTodoList] =useState([])
@@ -32,7 +37,13 @@ function App() {
               {todoItem}
               </label>
             </div>
-            <div>butonlar</div>
+            <div>
+            <Editicon width={25} height={25} style={{cursor:"pointer"}} className='me-2'/>
+            <Saveicon width={25} height={25} style={{cursor:"pointer"}} className='me-2'/>
+            <Trashicon width={25} height={25} style={{cursor:"pointer"}}/>
+              
+             
+            </div>
           </div>
           )}
         </div>
